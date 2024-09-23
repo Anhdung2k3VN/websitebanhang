@@ -13,7 +13,7 @@
   --text-color-light: #000;
   --text-color-dark: #000;
   --text-color-lighter: #000;
-  font-family: Arial, Helvetica, sans-serif;
+  --main-text-font: Verdana, Geneva, Tahoma, sans-serif;
 }
 header {
   display: flex;
@@ -53,7 +53,9 @@ a {
 .row {
   display: flex;
   flex-wrap: wrap;
+  flex-direction: row;
 }
+
 .logo {
   width: 10%;
   padding: 12px 50px;
@@ -283,12 +285,107 @@ a {
 .cartegory-left {
   width: 20%;
   padding: 0 12px;
-}
-.cartegory-left li {
-  padding: 0 12px;
-  position: relative;
   display: flex;
 }
+
 .cartegory-right {
   width: 80%;
+}
+.cartegory-right-top-item:first-child {
+  flex: 2;
+  font-size: 16px;
+  font-family: var(--main-text-font);
+  font-weight: bold;
+}
+.cartegory-right-top-item {
+  flex: 1;
+  padding: 0 12px;
+}
+.cartegory-right-top-item button {
+  width: 100%;
+  padding: 10px 20px;
+  display: flex;
+  background-color: #ffff;
+  border: 1px solid #000;
+  border-radius: 8px;
+  justify-content: space-between;
+  cursor: pointer;
+}
+.cartegory-right-top-item select {
+  width: 100%;
+  padding: 10px 20px;
+  display: flex;
+  background-color: #ffff;
+  border: 1px solid #000;
+  border-radius: 8px;
+  justify-content: space-between;
+  cursor: pointer;
+}
+.cartegory-right-content {
+  margin-top: 20px;
+  justify-content: space-between;
+  display: flex;
+}
+.cartegory-right-content-item {
+  width: calc(24% - 12px);
+  padding: 12px 0px;
+  /* margin-bottom: 20px; */
+  /* border: 1px solid #000; */
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: center;
+}
+.cartegory-right-content-item h1 {
+  font-size: 15px;
+  font-family: var(--main-text-font);
+  font-weight: bold;
+}
+.cartegory-right-content-item img {
+  width: 100%;
+}
+.cartegory-right-content-item p {
+  font-size: 10px;
+  font-family: var(--main-text-font);
+  font-weight: bold;
+}
+.cartegory-right-bottom {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  width: 100%;
+}
+.cartegory-right-bottom p {
+  font-size: 12px;
+  font-family: var(--main-text-font);
+  /* font-weight: bold; */
+}
+.cartegory-left-li {
+  padding: 12px 0px;
+  font-size: 12px;
+  font-family: var(--main-text-font);
+  font-weight: bold;
+  cursor: pointer;
+  display: grid;
+}
+.cartegory-left ul li {
+  padding: 10px 0px;
+}
+.cartegory-left ul li > a {
+  color: #000;
+  font-size: 16px;
+  font-weight: var(--main-text-font);
+}
+.cartegory-left ul li ul li {
+  padding-left: 10px;
+}
+.cartegory-left-li ul {
+  display: none;
+}
+.cartegory-left-li.block ul {
+  display: block;
+}
+.cartegory-left ul li ul li > a {
+  color: #000;
+  font-size: 12px;
+  font-weight: var(--main-text-font);
 }
