@@ -827,3 +827,225 @@ a {
   font-size: 14px;
   color: #333333;
 }
+/* ------------------DELIVERY----------------- */
+.delivery {
+  padding: 150px 0px 50px 0px;
+  width: 100%;
+  border-bottom: 2px solid #000;
+}
+
+.delivery-top-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.delivery-top {
+  height: 2px;
+  width: 70%;
+  background-color: #dddddd;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 50px 0 100px;
+}
+.delivery-top-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  border: 1px solid #dddddd;
+  border-radius: 50%;
+  background-color: #fff;
+}
+.delivery-top-item i {
+  color: #dddddd;
+}
+.delivery-top-address {
+  border: 1px solid #37c5f0;
+}
+.delivery-top-address i {
+  color: #37c5f0;
+}
+
+.delivery-container-left {
+  width: 60%;
+  padding: 0 12px;
+}
+.delivery-container-left p {
+  font-family: var(--main-text-font);
+  font-size: 12px;
+  color: #333333;
+}
+.delivery-container-left > p {
+  font-size: 12px;
+  font-weight: bold;
+}
+.delivery-container-left label {
+  font-family: var(--main-text-font);
+  font-size: 12px;
+  color: #333333;
+}
+.delivery-container-left-dangnhap {
+  display: flex;
+  justify-content: left;
+
+  font-family: var(--main-text-font);
+  padding: 4px 8px;
+}
+.delivery-container-left-dangnhap i {
+  font-size: 14px;
+  margin-right: 10px;
+}
+.delivery-container-left-khachle {
+  display: flex;
+  justify-content: left;
+
+  font-family: var(--main-text-font);
+  padding: 4px 0px;
+}
+.delivery-container-left-khachle input {
+  font-size: 12px;
+  margin: 0px 10px;
+}
+.delivery-container-left-dangky {
+  display: flex;
+  justify-content: left;
+
+  font-family: var(--main-text-font);
+  padding: 4px 0px;
+  margin-bottom: 30px;
+}
+.delivery-container-left-dangky input {
+  font-size: 12px;
+  margin: 0px 10px;
+}
+.delivery-container-left-input-top {
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+.delivery-container-left-input-top-item {
+  width: calc(50% - 12px);
+  padding: 0 12px;
+}
+.delivery-container-left-input-top-item label {
+  font-family: var(--main-text-font);
+  font-size: 14px;
+  color: #333333;
+}
+.delivery-container-left-input-top-item input {
+  width: 100%;
+  height: 35px;
+  padding: 10px 20px;
+  border: 1px solid #dddddd;
+  border-radius: 8px;
+  margin: 4px 0;
+}
+/* .delivery-container-left-input-top-item select {
+  width: 100%;
+  height: 35px;
+  padding: 10px 20px;
+  border: 1px solid #dddddd;
+  border-radius: 8px;
+  margin: 4px 0;
+} */
+.delivery-container-left-input-bottom {
+  margin-top: 20px;
+}
+.delivery-container-left-input-bottom-item {
+  padding: 0 12px;
+}
+.delivery-container-left-input-bottom-item label {
+  font-family: var(--main-text-font);
+  font-size: 14px;
+  color: #333333;
+}
+.delivery-container-left-input-bottom-item input {
+  width: 100%;
+  height: 35px;
+  padding: 10px 20px;
+  border: 1px solid #dddddd;
+  border-radius: 8px;
+  margin: 4px 0;
+}
+/* .delivery-container-left-input-bottom-item select {
+  width: 100%;
+  height: 35px;
+  padding: 10px 20px;
+  border: 1px solid #dddddd;
+  border-radius: 8px;
+  margin: 4px 0;
+} */
+.delivery-container-left-input-button {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  align-items: center;
+}
+.delivery-container-left-input-button p {
+  display: inline-block;
+  font-size: 12px;
+  color: red;
+}
+.delivery-container-left-input-button button p {
+  display: inline-block;
+  font-size: 12px;
+  color: #dddddd;
+}
+.delivery-container-left-input-button span {
+  font-family: var(--main-text-font);
+  font-size: 12px;
+  /* color: #333333; */
+  padding-left: 12px;
+}
+.delivery-container-left-input-button button {
+  display: block;
+  height: 40px;
+  background-color: #000;
+  border: 1px solid #dddddd;
+  border-radius: 8px;
+  cursor: pointer;
+  margin: 20px 12px 12px;
+  transition: all 0.5s ease;
+  padding: 0 12px;
+}
+
+.delivery-container-left-input-button button:hover {
+  background-color: #fff;
+}
+.delivery-container-left-input-button button:hover p {
+  color: #000;
+}
+.delivery-container-right {
+  width: 40%;
+  padding: 0 12px;
+  border-left: 1px solid #dddddd;
+}
+.delivery-container-right table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.delivery-container-right table th {
+  padding: 12px;
+  border-bottom: 1px solid #dddddd;
+  font-family: var(--main-text-font);
+  font-size: 12px;
+  text-transform: uppercase;
+  color: #333333;
+  border-collapse: collapse;
+}
+.delivery-container-right table p {
+  font-family: var(--main-text-font);
+  font-size: 12px;
+  color: #333333;
+}
+.delivery-container-right table td {
+  padding: 20px 0px;
+  border-bottom: 1px solid #dddddd;
+  font-family: var(--main-text-font);
+  font-size: 12px;
+  color: #333333;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
