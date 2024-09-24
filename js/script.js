@@ -5,7 +5,8 @@ itemsliderbar.forEach(function (menu, index) {
     menu.classList.toggle("block");
   });
 });
-//--------------------Product--------------------------
+
+//--------------------Product --------------------------
 
 const gioithieu = document.querySelectorAll(".gioithieu");
 const chitiet = document.querySelectorAll(".chitiet");
@@ -81,12 +82,23 @@ if (baoquan.length) {
 }
 gioithieu[0].click();
 
-//--------------------Product button--------------------------
-const buttonB = document.querySelectorAll(".product-content-right-bottom-top");
-if (buttonB) {
-  buttonB.addEventListener("click", function () {
-    document
-      .querySelector("product-content-right-bottom-content-big")
-      .classList.toggle("activeB");
-  });
+//--------------------Product button show container--------------------------
+const showContainerBtn = document.querySelector(
+  ".product-content-right-bottom-content-big"
+);
+function showContainer() {
+  showContainerBtn.classList.toggle("activeB");
 }
+
+//--------------------Product Big img--------------------------
+
+const bigImg = document.querySelector(".product-content-left-big-img img");
+const smallImgs = document.querySelectorAll(
+  ".product-content-left-small-img img"
+);
+
+smallImgs.forEach((img) => {
+  img.addEventListener("click", () => {
+    bigImg.src = img.src;
+  });
+});
