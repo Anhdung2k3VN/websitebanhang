@@ -620,4 +620,210 @@ a {
   font-weight: bold;
 }
 
-/* ------------------product related----------------- */
+/* ------------------CART----------------- */
+.cart {
+  padding: 150px 0px 50px 0px;
+  width: 100%;
+  border-bottom: 2px solid #000;
+}
+.cart-top-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.cart-top {
+  height: 2px;
+  width: 70%;
+  background-color: #dddddd;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 50px 0 100px;
+}
+.cart-top-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  border: 1px solid #dddddd;
+  border-radius: 50%;
+  background-color: #fff;
+}
+.cart-top-item i {
+  color: #dddddd;
+}
+.cart-top-cart {
+  border: 1px solid #37c5f0;
+}
+.cart-top-cart i {
+  color: #37c5f0;
+}
+.cart-content-left {
+  flex: 2;
+  padding: 0 12px;
+}
+.cart-content-left table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.cart-content-left table th {
+  padding: 12px;
+  border-bottom: 1px solid #dddddd;
+  font-family: var(--main-text-font);
+  font-size: 12px;
+  text-transform: uppercase;
+  color: #333333;
+  border-collapse: collapse;
+}
+.cart-content-left table p {
+  font-family: var(--main-text-font);
+  font-size: 12px;
+  color: #333333;
+}
+.cart-content-left table input {
+  width: 35px;
+  border: 1px solid #000;
+  border-radius: 5px;
+}
+/* .cart-content-left table span {
+  display: block;
+  font-family: var(--main-text-font);
+  font-size: 12px;
+
+  width: 20px;
+  height: 20px;
+  border: 1px solid #dddddd;
+  text-align: center;
+  border-radius: 50%;
+  cursor: pointer;
+} */
+
+.cart-content-left td:first-child img {
+  width: 100px;
+}
+.cart-content-left td:nth-child(3) img {
+  width: 30px;
+}
+.cart-content-left table td {
+  padding: 20px 0px;
+  border-bottom: 1px solid #dddddd;
+  font-family: var(--main-text-font);
+  font-size: 12px;
+  color: #333333;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+.cart-content-left table td span {
+  display: block;
+  font-family: var(--main-text-font);
+  font-size: 20px;
+
+  color: #333333;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.cart-content-right {
+  flex: 1;
+  padding: 0 12px;
+
+  border-left: 1px solid #dddddd;
+}
+.cart-content-right table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.cart-content-right table th {
+  padding: 12px;
+  border-bottom: 1px solid #dddddd;
+  font-family: var(--main-text-font);
+  font-size: 12px;
+  text-transform: uppercase;
+  color: #333333;
+  border-collapse: collapse;
+}
+.cart-content-right table p {
+  font-family: var(--main-text-font);
+  font-size: 12px;
+  color: #333333;
+}
+.cart-content-right table td {
+  padding: 20px 0px;
+  border-bottom: 1px solid #dddddd;
+  font-family: var(--main-text-font);
+  font-size: 12px;
+  color: #333333;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+.cart-center-right-text {
+  display: grid;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+.cart-center-right-text p {
+  font-family: var(--main-text-font);
+  font-size: 12px;
+  color: #333333;
+}
+.cart-center-right-text span {
+  font-family: var(--main-text-font);
+  font-size: 12px;
+  color: #333333;
+}
+.cart-center-right-button {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+.cart-center-right-button button {
+  display: block;
+  width: 100%;
+  height: 40px;
+  background-color: #fff;
+  border: 1px solid #000;
+  border-radius: 8px;
+  cursor: pointer;
+  margin: 20px 12px 12px;
+  transition: all 0.5s ease;
+}
+.cart-center-right-button button:first-child {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 10px 20px;
+  align-items: center;
+}
+.cart-center-right-button button:last-child {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 10px 20px;
+  align-items: center;
+  background-color: #000000;
+  border: 1px solid #ffffff;
+  color: #ffffff;
+}
+
+.cart-center-right-button button:first-child:hover {
+  background-color: #000;
+  color: #fff;
+}
+.cart-center-right-button button:last-child:hover {
+  background-color: #fff;
+  color: #000;
+  border: 1px solid #000;
+}
+.cart-center-right-dangnhap {
+  display: grid;
+  justify-content: space-between;
+  margin-top: 20px;
+  font-family: var(--main-text-font);
+  padding: 4px 0px;
+}
+.cart-center-right-dangnhap p {
+  font-size: 14px;
+  color: #333333;
+}
