@@ -158,3 +158,11 @@ smallImgs.forEach((img) => {
     bigImg.src = img.src;
   });
 });
+//--------------------test--------------------------
+function chuyenTrang() {
+  window.location.href = "http://127.0.0.1:5500/delivery.html";
+}
+
+function chuyenTrang1() {
+  window.location.href = "http://127.0.0.1:5500/payment.html";
+}
