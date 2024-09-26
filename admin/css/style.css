@@ -63,6 +63,7 @@ header {
   border-radius: 5px;
 }
 .admin-content-right-cartegory_add button {
+  width: 60px;
   height: 30px;
   padding: 0 10px;
   border: 1px solid #333;
@@ -70,8 +71,75 @@ header {
   background-color: #333;
   color: #fff;
   cursor: pointer;
+  margin-top: 12px;
+  margin-left: 60px;
 }
 .admin-content-right-cartegory_add button:hover {
+  background-color: #fff;
+  color: #333;
+}
+
+/* ------------------cartegory list -------------------*/
+.admin-content-right-cartegory_list {
+  margin-top: 20px;
+}
+.admin-content-right-cartegory_list > table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: center;
+}
+.admin-content-right-cartegory_list table tr th,
+td {
+  background-color: #dddddd;
+  color: #000000;
+  padding: 10px 0;
+  border: 1px solid #333;
+}
+.admin-content-right-cartegory_list a {
+  color: #333;
+  padding: 0 10px;
+}
+.admin-content-right-cartegory_list a:hover {
+  color: #333;
+  text-decoration: underline;
+}
+/* -------------Brand----------  */
+select {
+  width: 200px;
+  height: 30px;
+  padding: 0 10px;
+  border: 1px solid #333;
+  border-radius: 5px;
+}
+form {
+  margin-top: 20px;
+  padding: 12px 0;
+  display: grid;
+  align-items: center;
+}
+.admin-content-right-brand-add {
+  margin-top: 20px;
+}
+.admin-content-right-brand-add input {
+  height: 30px;
+  width: 200px;
+  padding: 0px 10px;
+  border: 1px solid #333;
+  border-radius: 5px;
+}
+.admin-content-right-brand-add button {
+  width: 60px;
+  height: 30px;
+  padding: 0px 10px;
+  border: 1px solid #333;
+  border-radius: 5px;
+  background-color: #333;
+  color: #fff;
+  cursor: pointer;
+  margin-top: 12px;
+  margin-left: 60px;
+}
+.admin-content-right-brand-add button:hover {
   background-color: #fff;
   color: #333;
 }
