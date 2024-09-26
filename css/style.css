@@ -285,8 +285,8 @@ a {
 }
 .cartegory-left {
   width: 20%;
-  padding: 0 12px;
-  display: flex;
+  padding: 50px 12px 0px 12px;
+  display: block;
 }
 
 .cartegory-right {
@@ -299,15 +299,18 @@ a {
   font-weight: bold;
 }
 .cartegory-right-top-item {
-  flex: 1;
-  padding: 0 12px;
+  flex: 0.7;
+  padding-left: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 .cartegory-right-top-item button {
   width: 100%;
   padding: 10px 20px;
   display: flex;
   background-color: #ffff;
-  border: 1px solid #000;
+  border: 1px solid #dddddd;
   border-radius: 8px;
   justify-content: space-between;
   cursor: pointer;
@@ -317,7 +320,7 @@ a {
   padding: 10px 20px;
   display: flex;
   background-color: #ffff;
-  border: 1px solid #000;
+  border: 1px solid #dddddd;
   border-radius: 8px;
   justify-content: space-between;
   cursor: pointer;
@@ -329,7 +332,7 @@ a {
 }
 .cartegory-right-content-item {
   width: calc(24% - 12px);
-  padding: 12px 0px;
+  padding: 12px 6px;
   /* margin-bottom: 20px; */
   /* border: 1px solid #000; */
   border-radius: 5px;
@@ -339,13 +342,14 @@ a {
 .cartegory-right-content-item h1 {
   font-size: 15px;
   font-family: var(--main-text-font);
+
   font-weight: bold;
 }
 .cartegory-right-content-item img {
   width: 100%;
 }
 .cartegory-right-content-item p {
-  font-size: 10px;
+  font-size: 12px;
   font-family: var(--main-text-font);
   font-weight: bold;
 }
@@ -1158,7 +1162,13 @@ a {
   margin-top: 20px;
   padding: 12px 0px;
 }
-.payment-content-right-top p {
+.payment-content-right-top-title {
+  text-align: center;
+  justify-content: center;
+  margin-top: 20px;
+  padding: 12px 0px;
+}
+.payment-content-right-top-title p {
   font-family: var(--main-text-font);
   font-size: 16px;
   color: #333333;

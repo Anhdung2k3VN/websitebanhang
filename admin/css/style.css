@@ -1,0 +1,77 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+  color: #333;
+}
+ul {
+  list-style: none;
+}
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+}
+/* Header */
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 10px 0;
+  text-align: center;
+}
+
+/* xong */
+.admin-content {
+  padding: 100px 0px;
+}
+.admin-content-left {
+  width: 25%;
+  height: 100vh;
+  float: left;
+  padding: 0 20px;
+  background-color: #dddddd;
+}
+.admin-content-left > ul > li > a {
+  margin-top: 20px;
+  font-weight: bold;
+}
+.admin-content-left > ul > li {
+  margin-top: 10px;
+  font-weight: normal;
+  padding: 6px 0px;
+}
+
+.admin-content-left ul ul {
+  display: block;
+  margin-left: 20px;
+}
+.admin-content-right {
+  width: 75%;
+  height: 100vh;
+  float: left;
+  padding: 0 20px;
+  background-color: #f4f4f4;
+}
+.admin-content-right-cartegory_add input {
+  height: 30px;
+  width: 200px;
+  padding: 0 10px;
+  border: 1px solid #333;
+  border-radius: 5px;
+}
+.admin-content-right-cartegory_add button {
+  height: 30px;
+  padding: 0 10px;
+  border: 1px solid #333;
+  border-radius: 5px;
+  background-color: #333;
+  color: #fff;
+  cursor: pointer;
+}
+.admin-content-right-cartegory_add button:hover {
+  background-color: #fff;
+  color: #333;
+}
