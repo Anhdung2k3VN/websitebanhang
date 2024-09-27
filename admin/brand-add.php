@@ -10,6 +10,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $brand_name = $_POST['brand-name'];
     $insert_brand = $brand->insert_brand($cartegory_id, $brand_name);
     echo "<script type='text/javascript'>alert('$insert_brand');</script>";
+    echo "<script type='text/javascript'>window.location.href='brand-list.php';</script>";
 }
 
 ?>

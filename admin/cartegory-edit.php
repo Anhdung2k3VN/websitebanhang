@@ -43,6 +43,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $cartegory_name = $_POST['cartegory-name'];
     $update_cartegory = $cartegory->update_cartegory($cartegory_name, $cartegory_id);
     echo "<script type='text/javascript'>alert('$update_cartegory');</script>";
+    echo "<script type='text/javascript'>window.location.href='cartegory-list.php';</script>";
 }
 ?>
 <link rel="stylesheet" href="./css/style.css">

@@ -63,7 +63,7 @@ class cartegory
             $result = $this->db->update($query);
             if ($result) {
                 $alert = "Cập nhật danh mục thành công";
-                header("Location: cartegory-list.php");
+
                 return $alert;
             } else {
                 $alert = "Cập nhật danh mục thất bại";
@@ -77,7 +77,7 @@ class cartegory
         $result = $this->db->delete($query);
         if ($result) {
             $alert = "Xóa danh mục thành công";
-            header("Location: cartegory-list.php");
+
             return $alert;
         } else {
             $alert = "Xóa danh mục thất bại";

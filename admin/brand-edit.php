@@ -33,8 +33,10 @@ $brand = new brand();
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     $brand_name = $_POST['brand-name'];
-    $update_brand = $brand->update_brand($brand_name, $brand_id);
+    $cartegory_id = $_POST['cartegory_id'];
+    $update_brand = $brand->update_brand($cartegory_id, $brand_name, $brand_id);
     echo "<script type='text/javascript'>alert('$update_brand');</script>";
+    echo "<script type='text/javascript'>window.location.href='brand-list.php';</script>";
 }
 ?>
 <link rel="stylesheet" href="./css/style.css">
@@ -49,9 +51,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             if ($show_cartegory) {
                 while ($result = $show_cartegory->fetch_assoc()) {
             ?>
-            <option <?php if ($resultBrand['cartegory_id'] == $result['cartegory_id']){echo'selected';} ?>
-                value="<?php echo $result['cartegory_id'] ?>"><?php echo $result['cartegory_name'] ?>
-            </option>
+                    <option <?php if ($resultBrand['cartegory_id'] == $result['cartegory_id']) {
+                                echo 'selected';
+                            } ?> value="<?php echo $result['cartegory_id'] ?>"><?php echo $result['cartegory_name'] ?>
+                    </option>
             <?php
                 }
             }

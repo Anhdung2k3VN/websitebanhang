@@ -143,3 +143,57 @@ form {
   background-color: #fff;
   color: #333;
 }
+/* ------------Product------------- */
+.admin-content-right-product-add {
+  margin-top: 20px;
+}
+.admin-content-right-product-add input {
+  height: 30px;
+  width: 300px;
+  padding: 0px 10px;
+  border: 1px solid #333;
+  border-radius: 5px;
+  margin: 12px 0;
+}
+.admin-content-right-product-add button {
+  width: 60px;
+  height: 30px;
+  padding: 0px 10px;
+  border: 1px solid #333;
+  border-radius: 5px;
+  background-color: #333;
+  color: #fff;
+  cursor: pointer;
+  margin-top: 12px;
+  margin-left: 60px;
+}
+.admin-content-right-product-add button:hover {
+  background-color: #fff;
+  color: #333;
+}
+textarea {
+  width: 300px;
+  height: 150px;
+  padding: 10px;
+  border: 1px solid #333;
+  border-radius: 5px;
+  margin: 12px 0;
+}
+.admin-content-right-product-add select {
+  width: 300px;
+  height: 30px;
+  padding: 0 10px;
+  border: 1px solid #333;
+  border-radius: 5px;
+  margin: 10px 0;
+}
+.admin-content-right-product-add input[type="file"] {
+  margin-top: 12px;
+  width: 300px;
+  height: 30px;
+  padding: 4px;
+}
+.admin-content-right-product-add label {
+  margin-top: 12px;
+  display: block;
+}

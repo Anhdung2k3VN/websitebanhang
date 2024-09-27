@@ -15,5 +15,5 @@ $brand = new brand();
 
 $delete_brand = $brand->delete_brand($brand_id);
 echo "<script type='text/javascript'>alert('$delete_brand');</script>";
-
+echo "<script type='text/javascript'>window.location.href='brand-list.php';</script>";
 ?>

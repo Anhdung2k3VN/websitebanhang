@@ -3,7 +3,7 @@ include_once "../lib/database.php";
 include_once "../helpers/format.php";
 ?>
 <?php
-class brand
+class product
 {
     private $db;
     private $fm;
@@ -12,6 +12,74 @@ class brand
         $this->db = new Database();
         $this->fm = new Format();
     }
+
+    public function show_cartegory()
+    {
+        $query = "SELECT * FROM tbl_cartegory ORDER BY cartegory_id DESC";
+        $result = $this->db->select($query);
+        return $result;
+    }
+    public function show_brand()
+    {
+        "SELECT * FROM tbl_brand ORDER BY brand_id DESC";
+        $query = "SELECT tbl_brand.*, tbl_cartegory.cartegory_name
+        FROM tbl_brand INNER JOIN tbl_cartegory ON tbl_brand.cartegory_id = tbl_cartegory.cartegory_id
+        ORDER BY tbl_brand.brand_id DESC";
+        $result = $this->db->select($query);
+        return $result;
+    }
+
+    public function insert_product()
+    {
+
+
+
+
+
+        $product_name = $_POST['product-name'];
+        $cartegory_id = $_POST['cartegory-id'];
+        $brand_id = $_POST['brand-id'];
+        $product_price = $_POST['product-price'];
+        $product_sale = $_POST['product-sale'];
+        $product_desc = $_POST['product-desc'];
+        $product_img = $_FILES['product-img']['name'];
+        move_uploaded_file(
+            $_FILES['product-img']['tmp_name'],
+            'uploads/' . $_FILES['product-img']['name']
+        );
+
+        $query = "INSERT INTO tbl_products ( product_name, cartegory_id, brand_id, product_price, product_sale, product_desc, product_img) VALUES(
+               '$product_name',
+               '$cartegory_id',
+               '$brand_id',
+               '$product_price',
+               '$product_sale',
+               '$product_desc',
+               '$product_img')";
+        $result = $this->db->insert($query);
+        return $result;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     public function insert_brand($cartegory_id, $brand_name)
     {
         $brand_name = $this->fm->validation($brand_name);
@@ -31,21 +99,7 @@ class brand
             }
         }
     }
-    public function show_brand()
-    {
-        "SELECT * FROM tbl_brand ORDER BY brand_id DESC";
-        $query = "SELECT tbl_brand.*, tbl_cartegory.cartegory_name
-        FROM tbl_brand INNER JOIN tbl_cartegory ON tbl_brand.cartegory_id = tbl_cartegory.cartegory_id
-        ORDER BY tbl_brand.brand_id DESC";
-        $result = $this->db->select($query);
-        return $result;
-    }
-    public function show_cartegory()
-    {
-        $query = "SELECT * FROM tbl_cartegory ORDER BY cartegory_id DESC";
-        $result = $this->db->select($query);
-        return $result;
-    }
+
     public function get_brand_by_id($brand_id)
     {
         $query = "SELECT * FROM tbl_brand WHERE brand_id = '$brand_id'";

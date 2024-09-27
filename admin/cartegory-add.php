@@ -9,6 +9,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $cartegory_name = $_POST['cartegory-name'];
     $insert_cartegory = $cartegory->insert_cartegory($cartegory_name);
     echo "<script type='text/javascript'>alert('$insert_cartegory');</script>";
+    echo "<script type='text/javascript'>window.location.href='cartegory-list.php';</script>";
 }
 
 ?>
