@@ -31,22 +31,23 @@ class product
 
     public function insert_product()
     {
-
-
-
-
-
         $product_name = $_POST['product-name'];
         $cartegory_id = $_POST['cartegory-id'];
         $brand_id = $_POST['brand-id'];
         $product_price = $_POST['product-price'];
         $product_sale = $_POST['product-sale'];
         $product_desc = $_POST['product-desc'];
-        $product_img = $_FILES['product-img']['name'];
+        $image_name = $_FILES['product-img']['name'];
+        $extension = pathinfo($image_name, PATHINFO_EXTENSION);
+        $image_name_new = uniqid() . '.' . $extension;
+
         move_uploaded_file(
             $_FILES['product-img']['tmp_name'],
-            'uploads/' . $_FILES['product-img']['name']
+            'uploads/' . $image_name_new
         );
+
+        $base_url = './uploads/';
+        $full_image_path = $base_url . $image_name_new;
 
         $query = "INSERT INTO tbl_products ( product_name, cartegory_id, brand_id, product_price, product_sale, product_desc, product_img) VALUES(
                '$product_name',
@@ -55,10 +56,58 @@ class product
                '$product_price',
                '$product_sale',
                '$product_desc',
-               '$product_img')";
+               '$full_image_path')";
         $result = $this->db->insert($query);
+        if ($result) {
+            $query = "SELECT * FROM tbl_products ORDER BY product_id DESC LIMIT 1";
+            $result = $this->db->select($query)->fetch_assoc();
+            $product_id = $result['product_id'];
+
+            $image_name1 = $_FILES['product-img-detail']['name'];
+
+            foreach ($image_name1 as $key => $value) {
+                $extension = pathinfo($value, PATHINFO_EXTENSION); // Use $value instead of $image_name1
+                $image_name_new1 = uniqid() . '.' . $extension;
+
+                move_uploaded_file(
+                    $_FILES['product-img-detail']['tmp_name'][$key],
+                    'uploads/' . $image_name_new1
+                ); // Remove the unnecessary indexing of $image_name_new1
+
+                $base_url = './uploads/';
+                $full_image_path = $base_url . $image_name_new1;
+
+
+                $query = "INSERT INTO tbl_products_img_detail (product_id, product_img_detail) VALUES(
+                    '$product_id',
+                    '$full_image_path')";
+                $result = $this->db->insert($query);
+            }
+
+            return $result;
+        }
+    }
+
+    public function show_brand_ajax($cartegory_id)
+    {
+        $query = "SELECT * FROM tbl_brand where cartegory_id = '$cartegory_id'";
+        $result = $this->db->select($query);
         return $result;
     }
+
+    public function show_product()
+    {
+        $query = "SELECT tbl_products.*, tbl_cartegory.cartegory_name, tbl_brand.brand_name
+        FROM tbl_products
+        INNER JOIN tbl_cartegory ON tbl_products.cartegory_id = tbl_cartegory.cartegory_id
+        INNER JOIN tbl_brand ON tbl_products.brand_id = tbl_brand.brand_id
+        ORDER BY tbl_products.product_id DESC";
+        $result = $this->db->select($query);
+        return $result;
+    }
+
+
+
 
 
 

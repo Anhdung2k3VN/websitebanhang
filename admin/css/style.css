@@ -197,3 +197,30 @@ textarea {
   margin-top: 12px;
   display: block;
 }
+.admin-content-right-product-list {
+  margin-top: 20px;
+}
+.admin-content-right-product-list table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: center;
+}
+.admin-content-right-product-list table tr th,
+td {
+  background-color: #dddddd;
+  color: #000000;
+  padding: 10px 0;
+  border: 1px solid #333;
+}
+.admin-content-right-product-list a {
+  color: #333;
+  padding: 0 10px;
+}
+.admin-content-right-product-list a:hover {
+  color: #333;
+  text-decoration: underline;
+}
+.admin-content-right-product-list img {
+  width: 100px;
+  height: 100px;
+}
