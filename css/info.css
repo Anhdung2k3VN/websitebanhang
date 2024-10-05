@@ -5,17 +5,16 @@
     font-size: 20px;
 }
 .info-image{
-    width: 1000px;
+    display: block;
+    max-width: 1050px;
     align-items: center ;
     margin: auto;
-    margin-top: 20px;
     box-sizing: border-box;
 }
 .info-text{
     max-width: 1050px;
     text-align: justify;
-    margin-left: 260px;
-    margin-top: 10px;
+    margin: auto;
     line-height: 25px;
     box-sizing: border-box;
     display: block;
@@ -35,7 +34,7 @@
     box-sizing: border-box;
     text-align: left;
     width: 50%;
-    margin: 0 20px;
+    margin: auto;
 }
 .label-city{
     font-size: 12px;
@@ -64,7 +63,7 @@
     box-sizing: border-box;
     text-align: left;
     width: 50%;
-    margin: 0 20px;
+    margin: auto;
 }
 .label-district{
     font-size: 12px;
@@ -105,16 +104,19 @@
     flex-direction: row;
 	justify-content: center;
     border: 1px black;
-    width: 100%;
-    margin: 50px auto;
+    max-width: 1250px;
+    margin: auto;
 }
 .map{
     display: flex;
+    width: 50%;
     height: 500px;
+    margin: auto;
 }
 .scroll-bar{
     display: block;
     height: 500px;
+    margin: auto;
     width: 50%;
     padding: 0 0 0 15px;
     overflow: auto;
