@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./img/logo.png">
+    <script src="https://kit.fontawesome.com/393d11b23d.js" crossorigin="anonymous"></script>
+    <!--    <link rel="stylesheet" href="./css/index.css">-->
+    <link rel="stylesheet" href="./css/admin.css">
+    <title>360 Boutique</title>
+</head>
+<body>
+<div class="sidebar">
+    <div class="sidebar-img-wrapper">
+        <img src="./img/logo.png" alt="logo">
+    </div>
+    <div class="sidebar-item-wrapper">
+        <div class="sidebar-item active" onclick="showSection('customer-management',this)">
+            <i class="fa-solid fa-address-card"></i>
+            <p>Quản lý khách hàng</p>
+        </div>
+        <div class="sidebar-item" onclick="showSection('product-management',this)">
+            <i class="fa-solid fa-bag-shopping"></i>
+            <p>Quản lý sản phẩm</p>
+        </div>
+        <div class="sidebar-item" onclick="showSection('order-management',this)">
+            <i class="fa-solid fa-cart-shopping"></i>
+            <p>Quản lý đơn hàng</p>
+        </div>
+        <div class="sidebar-item" onclick="showSection('discount-management',this)">
+            <i class="fa-solid fa-tags"></i>
+            <p>Quản lý khuyến mãi</p>
+        </div>
+        <div class="sidebar-item" onclick="showSection('statistics',this)">
+            <i class="fa-solid fa-chart-simple"></i>
+            <p>Thống kê</p>
+        </div>
+        <div class="sidebar-item log-out-item">
+            <i class="fa-solid fa-arrow-right-from-bracket"></i>
+            <p>Đăng xuất</p>
+        </div>
+    </div>
+
+</div>
+<div class="main-content">
+    <!--CUSTOMER-->
+    <div id="customer-management" class="section">
+        <h1>QUẢN LÝ KHÁCH HÀNG</h1>
+        <div class="control">
+            <select>
+                <option value="">--Chọn danh mục--</option>
+                <option value="Sneaker">Mã sản phẩm</option>
+                <option value="Sandal">Tên sản phẩm</option>
+                <option value="Leather"></option>
+                <option value="Balletflat">Giày búp bê</option>
+                <option value="Highheels">Giày cao gót</option>
+                <option value="Athletic">Giày đá banh</option>
+            </select>
+            <input type="text" placeholder="Nhập thông tin tìm kiếm">
+            <a href=""><button style="background: green">Xuất Excel</button></a>
+            <a href=""><button style="background: var(--mau-cam--)">Xuất PDF</button></a>
+            <a href=""><button style="background: var(--mau-xanh--)">Thêm sản phẩm</button></a>
+            <a href=""><button style="background: green">Nhập Excel</button></a>
+        </div>
+        <table>
+            <thead>
+            <tr>
+                <th>Mã khách hàng</th>
+                <th>Tên khách hàng</th>
+                <th>Email</th>
+                <th>Số điện thoại</th>
+                <th>Trạng thái</th>
+                <th>Tác vụ</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>KH001</td>
+                <td class="ten-san-pham">Nguyễn Hoàng Ngọc Thủy Thương</td>
+                <td>abc123456@gmail.com</td>
+                <td>0898385931</td>
+                <td>Hoạt động</td>
+                <td>
+                    <button type="submit" class="input-detail btn-open-detail">Chi tiết</button>
+                    <button type="submit" class="input-update btn-open-update">Sửa</button>
+                    <button type="submit" class="input-delete btn-open-delete">Xóa</button>
+                </td>
+            </tr>
+            <tr>
+                <td>KH002</td>
+                <td  class="ten-san-pham">Dương Ngọc AB</td>
+                <td>abduongngoc@gmail.com</td>
+                <td>1234567890</td>
+                <td>Tạm ngừng</td>
+                <td>
+                    <button type="submit" class="input-detail btn-open-detail">Chi tiết</button>
+                    <button type="submit" class="input-update btn-open-update">Sửa</button>
+                    <button type="submit" class="input-delete btn-open-delete">Xóa</button>
+                </td>
+            </tr>
+            <tr>
+                <td>KH003</td>
+                <td  class="ten-san-pham">Đinh Bộ Lĩnh</td>
+                <td>thiduonglg@gmail.com</td>
+                <td>1234567890</td>
+                <td>Tạm ngừng</td>
+                <td>
+                    <button type="submit" class="input-detail btn-open-detail">Chi tiết</button>
+                    <button type="submit" class="input-update btn-open-update">Sửa</button>
+                    <button type="submit" class="input-delete btn-open-delete">Xóa</button>
+                </td>
+            </tr>
+            <tr>
+                <td>KH002</td>
+                <td  class="ten-san-pham">Nguyễn Văn B</td>
+                <td>thiduonglg@gmail.com</td>
+                <td>1234567890</td>
+                <td>Tạm ngừng</td>
+                <td>
+                    <button type="submit" class="input-detail btn-open-detail">Chi tiết</button>
+                    <button type="submit" class="input-update btn-open-update">Sửa</button>
+                    <button type="submit" class="input-delete btn-open-delete">Xóa</button>
+                </td>
+            </tr>
+            <tr>
+                <td>KH002</td>
+                <td  class="ten-san-pham">Dương Ngọc AB</td>
+                <td>abduongngoc@gmail.com</td>
+                <td>1234567890</td>
+                <td>Tạm ngừng</td>
+                <td>
+                    <button type="submit" class="input-detail btn-open-detail">Chi tiết</button>
+                    <button type="submit" class="input-update btn-open-update">Sửa</button>
+                    <button type="submit" class="input-delete btn-open-delete">Xóa</button>
+                </td>
+            </tr>
+            <tr>
+                <td>KH002</td>
+                <td  class="ten-san-pham">Dương Ngọc AB</td>
+                <td>abduongngoc@gmail.com</td>
+                <td>1234567890</td>
+                <td>Tạm ngừng</td>
+                <td>
+                    <button type="submit" class="input-detail btn-open-detail">Chi tiết</button>
+                    <button type="submit" class="input-update btn-open-update">Sửa</button>
+                    <button type="submit" class="input-delete btn-open-delete">Xóa</button>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <!--PRODUCT-->
+    <div id="product-management" class="section active">
+        <h1>QUẢN LÝ SẢN PHẨM</h1>
+        <div class="control">
+            <select>
+                <option value="">--Chọn danh mục--</option>
+                <option value="Sneaker">Mã sản phẩm</option>
+                <option value="Sandal">Tên sản phẩm</option>
+                <option value="Leather"></option>
+                <option value="Balletflat">Giày búp bê</option>
+                <option value="Highheels">Giày cao gót</option>
+                <option value="Athletic">Giày đá banh</option>
+            </select>
+            <input type="text" placeholder="Nhập thông tin tìm kiếm">
+            <a href=""><button style="background: green">Xuất Excel</button></a>
+            <a href=""><button style="background: var(--mau-cam--)">Xuất PDF</button></a>
+            <a href=""><button style="background: var(--mau-xanh--)">Thêm sản phẩm</button></a>
+            <a href=""><button style="background: green">Nhập Excel</button></a>
+        </div>
+        <table>
+            <thead>
+            <tr>
+                <th>Mã sản phẩm</th>
+                <th>Tên sản phẩm</th>
+                <th>Hình ảnh</th>
+                <th>Danh mục</th>
+                <th>Trạng thái</th>
+                <th>Tác vụ</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>SP001</td>
+                <td class="ten-san-pham">Air Jordan 1 Blazer High Zoom Comfort 2 'FIBA'</td>
+                <td><img src="./img/dam-om/dam0.jpg" alt="img"></td>
+                <td>Sneaker</td>
+                <td>Còn kinh doanh</td>
+                <td>
+                    <button type="submit" class="input-detail btn-open-detail">Chi tiết</button>
+                    <button type="submit" class="input-update btn-open-update">Sửa</button>
+                    <button type="submit" class="input-delete btn-open-delete">Xóa</button>
+                </td>
+            </tr>
+            <tr>
+                <td>SP002</td>
+                <td  class="ten-san-pham">Adidas Blazer Pro Bounce 2018 Basketball Shoes 'Black Royal Blue Orange</td>
+                <td><img src="./img/dam-om/dam1.jpg" alt="hinh"></td>
+                <td>Giày cao gót</td>
+                <td>Tạm ngừng</td>
+                <td>
+                    <button type="submit" class="input-detail btn-open-detail">Chi tiết</button>
+                    <button type="submit" class="input-update btn-open-update">Sửa</button>
+                    <button type="submit" class="input-delete btn-open-delete">Xóa</button>
+                </td>
+            </tr>
+            <tr>
+                <td>SP001</td>
+                <td class="ten-san-pham">Air Jordan 1 Blazer High Zoom Comfort 2 'FIBA'</td>
+                <td><img src="./img/dam-om/dam2.jpg" alt="img"></td>
+                <td>Sneaker</td>
+                <td>Còn kinh doanh</td>
+                <td>
+                    <button type="submit" class="input-detail btn-open-detail">Chi tiết</button>
+                    <button type="submit" class="input-update btn-open-update">Sửa</button>
+                    <button type="submit" class="input-delete btn-open-delete">Xóa</button>
+                </td>
+            </tr>
+            <tr>
+                <td>SP001</td>
+                <td class="ten-san-pham">Air Jordan 1 Blazer High Zoom Comfort 2 'FIBA'</td>
+                <td><img src="./img/dam-om/dam3.jpg" alt="img"></td>
+                <td>Sneaker</td>
+                <td>Còn kinh doanh</td>
+                <td>
+                    <button type="submit" class="input-detail btn-open-detail">Chi tiết</button>
+                    <button type="submit" class="input-update btn-open-update">Sửa</button>
+                    <button type="submit" class="input-delete btn-open-delete">Xóa</button>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <!--ORDER-->
+    <div id="order-management" class="section">
+        <h1>QUẢN LÝ ĐƠN HÀNG</h1>
+    </div>
+    <!--DISCOUNT-->
+    <div id="discount-management" class="section">
+        <h1>QUẢN LÝ KHUYẾN MÃI</h1>
+    </div>
+    <!--STATISTICS-->
+    <div id="statistics" class="section">
+        <h1>THỐNG KÊ</h1>
+    </div>
+</div>
+<script>
+    function showSection(sectionId, element) {
+        // Tìm và xóa lớp 'active' khỏi phần tử hiện đang hoạt động
+        const activeSection = document.querySelector('.section.active');
+        if (activeSection) {
+            activeSection.classList.remove('active');
+        }
+
+        // Thêm lớp 'active' vào phần tử được chọn
+        const selectedSection = document.getElementById(sectionId);
+        if (selectedSection) {
+            selectedSection.classList.add('active');
+        }
+
+        // Tìm và xóa lớp 'active' khỏi sidebar-item hiện đang hoạt động
+        const activeItem = document.querySelector('.sidebar-item.active');
+        if (activeItem) {
+            activeItem.classList.remove('active');
+        }
+
+        // Thêm lớp 'active' vào sidebar-item được chọn
+        element.classList.add('active');
+    }
+
+</script>
+</body>
+</html>
