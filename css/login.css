@@ -1,0 +1,79 @@
+.image{
+    display: flex;
+    max-width: 100%;
+    height: 800px;
+    background-image: url(./../img/dang-nhap.jpg);
+    background-size: cover;
+}
+.login-form{
+    display: flex; 
+    margin: 150px;
+    max-width: 500px;
+    height: 430px;
+    background-color: #fff;
+    border-radius: 15px;
+    padding: 30px;
+    line-height: 2.0;
+}
+.signup-form{
+    display: flex;
+    margin: 150px;
+    max-width: 500px;
+    height: 380px;
+    background-color: #fff;
+    border-radius: 15px;
+    padding: 30px;
+    line-height: 2.0;
+}
+.forget-form{
+    display: flex;
+    margin: 150px;
+    max-width: 500px;
+    height: 320px;
+    background-color: #fff;
+    border-radius: 15px;
+    padding: 30px;
+    line-height: 2.0;
+}
+.form-group{
+    margin-top:20px;
+}
+.sub-form-group{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+}
+.sub1{
+    width: 50%;
+    text-align: left;
+}
+.sub2{
+    width: 50%;
+    text-align: right;
+}
+.form-input{
+    width: 100%;
+    height: 35px;
+    margin-top: 5px;
+    padding: 4px 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.submit{
+    width: 130px;
+    height: 45px;
+    background-color: #bc0516;
+    color: white;
+    font-size: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+.forget-submit{
+    width: 180px;
+    height: 45px;
+    background-color: #bc0516;
+    color: white;
+    font-size: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
