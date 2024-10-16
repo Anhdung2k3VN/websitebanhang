@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="./css/collection.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img src="img/logo.png" alt="logo" />
+        </div>
+
+        <div class="menu">
+            <li class="list-item">
+                <a href="">NỮ</a>
+                <ul class="sub-menu">
+                    <li class="sub-list-item">
+                        <a href="./cartegory.html">Hàng mới về</a>
+                    </li>
+                    <li class="sub-list-item"><a href="">collection</a></li>
+                    <li class="sub-list-item">
+                        <a href="">Áo</a>
+                        <ul>
+                            <li><a href="">Áo sơ mi</a></li>
+                            <li><a href="">Áo thun</a></li>
+                            <li><a href="">Áo vest</a></li>
+                            <li><a href="">Áo khoác</a></li>
+                            <li><a href="">Áo len</a></li>
+                        </ul>
+                    </li>
+                    <li class="sub-list-item">
+                        <a href="">Quần</a>
+                        <ul>
+                            <li><a href="">Quần Jean</a></li>
+                            <li><a href="">Quần dài</a></li>
+                            <li><a href="">Quần lửng</a></li>
+                        </ul>
+                    </li>
+                    <li class="sub-list-item">
+                        <a href="">Váy</a>
+                        <ul>
+                            <li><a href="">Váy dài</a></li>
+                            <li><a href="">Váy ngắn</a></li>
+                            <li><a href="">Váy suông</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li class="list-item"><a href="">NAM</a></li>
+            <li class="list-item"><a href="">TRẺ EM</a></li>
+            <li class="list-item"><a href="">FLASH SALE</a></li>
+            <li class="list-item"><a href="">BỘ SƯU TẬP</a></li>
+            <li class="list-item"><a href="" style="color: red">TIN TỨC</a></li>
+            <li class="list-item"><a href="">THÔNG TIN</a></li>
+        </div>
+
+        <div class="others">
+            <li>
+                <input placeholder="Tìm Kiếm" type="text" /><i class="fa fa-search"></i>
+            </li>
+            <li><i class="fa fa-paw"></i></li>
+            <li><i class="fa fa-user"></i></li>
+            <li><i class="fa fa-shopping-bag"></i></li>
+        </div>
+    </header>
+    <div class="new-navbar" style="padding-top: 100px;">
+        <div class="new-navbar-text">
+            <p>Trang chủ/Tin tức</p>
+        </div>
+        <div class="new-body">
+            <div class="new-body-header">
+                <div class="new-body-header-left" style="padding-top: 20%;">
+
+
+                    <p class="new-body-header-left-time">04/10/2024</p>
+
+
+                    <h2>3 CÁCH PHỐI QUẦN JEAN NAM VỚI SƠ MI ỨNG DỤNG ĐA HOÀN CẢNH</h2>
+                    <div class="is-divider">-</div>
+
+                    <p class="new-body-header-left-text">
+                        Bạn đang tìm kiếm những cách phối đồ đơn giản nhưng vẫn thật
+                        phong cách với quần jean và áo sơ
+                        mi? Cặp đôi kinh điển này chưa bao giờ lỗi mốt và luôn mang đến vẻ ngoài lịch lãm, trẻ
+                        trung
+                        cho
+                        phái mạnh. 360 giới thiệu đến bạn 3 cách phối quần jean nam với áo sơ mi nam cực kỳ đa
+                        năng,
+                        phù
+                        hợp với nhiều hoàn cảnh khác nhau.</p>
+
+                    <button>Xem thêm+</button>
+
+
+                </div>
+                <div class="new-body-header-right">
+                    <img src="./img/collection/STDTK421-APTK465-QJDTK309-STDTK421-APTTK423-QJDTK334-2-Medium-e1728017423347.jpg"
+                        alt="">
+                </div>
+            </div>
+            <div class="new-body-mini ">
+                <div class="new-body-box-mini new-body-box-mini-add"></div>
+            </div>
+        </div>
+    </div>
+    <div class="new-body-footer">
+        <button class="new-body-footer-button">Xem thêm+</button>
+    </div>
+    </div>
+
+</body>
+<script src="./js/data/data-news.js"></script>
+<!-- <script src="./js/script.js"></script> -->
+<script>
+
+    RenderTodoList(0, 2);
+    function RenderTodoList(index, n) {
+        let outputtext = '';
+        for (let i = index; i < 3 * n; i++) {
+
+            const value = newinfo[i];
+            // const name = objecttodolist.name;
+            // const dueDate = objecttodolist.dueDates
+            outputtext += ` <div class="new-body-box-mini-mini">
+                        <div class="new-body-box-mini-img">
+                            <img src="${value.img}" alt=""
+                                class="" style="  object-fit: cover;">
+                        </div>
+                        <div class="new-body-box-mini-header box-mini-padding">
+                            <p>${value.time}</p>
+                            <h3>${value.title}</h3>
+                        </div>
+                        <div class="new-body-box-mini-text-div box-mini-padding">
+                            <p class="new-body-box-mini-text">${value.content}
+                            </p>
+                        </div>
+                        <button class="box-mini-padding">Xem thêm+</button>
+                    </div>`;
+        }
+        console.log(outputtext);
+        document.querySelector('.new-body-box-mini-add').innerHTML = outputtext;
+
+    }
+    let newcountclick = 2;
+    document.querySelector('.new-body-footer-button').addEventListener('click', () => {
+        newcountclick++;
+        RenderTodoList(0, newcountclick);
+
+    })
+</script>
+
+
+</html>

@@ -371,3 +371,119 @@ img{
         padding-right: 0;
     }
 }
+/* -----------------------News------------------------------------ */
+.new-body{
+  display: grid;
+  grid-template-rows: auto 1fr 130px;
+  row-gap: 40px;
+  width: 100%;
+  padding: 0 70px 0 70px;
+}
+.new-body .new-body-header{
+
+  display: grid;
+  grid-template-columns: 1.4fr 2.6fr;
+  width: 100%;
+}
+.new-body-header-left button{
+  color: #BC0517;
+  margin-top: 10%;
+  font-weight: bold;
+
+}
+.new-body-header-right{
+  width: 100%;
+}
+.new-body-header-left{
+  padding: auto 0px;
+  justify-content: center;
+  /* text-align: center; */
+  /* align-items: center; */
+}
+.new-body-header-left h2{
+font-size: 18px;
+font-family: Arial;
+}
+.new-body-header-right img{
+  width: 100%;
+  aspect-ratio: 15/8.5;
+  object-fit: cover;
+}
+.new-body-header-left .new-body-header-left-text{
+  line-height: 20px;
+  font-size: 15.6px;
+  display: -webkit-box;
+  -webkit-line-clamp: 5;  /* số dòng hiển thị */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.new-body-header-left .new-body-header-left-h2{
+  font-size: 20px;
+  line-height: 30px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.new-body-header-left button{
+  font-size: 20px;
+  line-height: 30px;
+  font-family: Arial, Helvetica, sans-serif;
+  border: none;
+}
+.new-body-header-left{
+  padding: 0 45px 0 45px;
+  background-color:#EBECEE;
+}
+/* .new-body-mini .new-body-columns{
+  display: grid;
+  grid-template-columns:  1fr 1fr 1fr;
+  column-gap: 30px;
+  margin-bottom: 30px;
+} */
+.box-mini-padding{
+ padding: 15px 15px 5px 15px;
+}
+.new-body-box-mini img{
+  width: 100%;
+  aspect-ratio: 390/215;
+}
+/* .new-body-box-mini-text-div{
+ padding: 15px 15px 15px 15px;
+} */
+.new-body-box-mini-text{
+  display: -webkit-box;
+-webkit-line-clamp: 3;  /* số dòng hiển thị */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.new-body-box-mini{
+  /* aspect-ratio: 5/6; */
+  /* display: grid;
+  grid-template-rows:  1fr 1fr 1fr 1fr; */
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 10px;
+  row-gap: 10px;
+  border: #DDDDDD solid;
+  border-width: 0.1px;
+}
+.new-body-box-mini button{
+  font-size: 16px;
+  color: #BC0517;
+  font-weight: bold;
+  border: none;
+  background-color: #FFFF;
+}
+.new-body-footer{
+
+text-align: center;
+
+}
+.new-navbar .new-body-footer button{
+  font-size: 30px;
+  background-color: #FFFF;
+
+  text-align: justify;    /* padding-left: 40%; */
+  color: #BC0517;
+  font-weight: bold;
+  border: none;
+}
