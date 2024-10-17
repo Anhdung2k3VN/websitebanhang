@@ -372,18 +372,28 @@ img{
     }
 }
 /* -----------------------News------------------------------------ */
+.new-navbar{
+  padding: 0 70px 0 70px;
+}
 .new-body{
   display: grid;
   grid-template-rows: auto 1fr 130px;
   row-gap: 40px;
   width: 100%;
-  padding: 0 70px 0 70px;
+ 
+}
+.new-navbar .new-navbar-text{
+  padding-top: 20px;
+  padding-bottom: 40px;
+   box-shadow: 0 5px 10px -1px #EBECEE inset;
+   color: #6D6D6D;
 }
 .new-body .new-body-header{
 
   display: grid;
   grid-template-columns: 1.4fr 2.6fr;
   width: 100%;
+  background-color: #EBECEE;
 }
 .new-body-header-left button{
   color: #BC0517;
@@ -391,8 +401,32 @@ img{
   font-weight: bold;
 
 }
+ .new-body-header-left-time::before{
+     content: '';
+    width: 11px;
+    height: 11px;
+    background-image: url(./../img/collection/time.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: inline-block;
+    /* position: absolute;
+    top: 2.55px;
+    left: 0; */
+ 
+}
 .new-body-header-right{
+  text-align: left;
+  vertical-align: middle;
   width: 100%;
+}
+.new-body-header-right img{
+margin: auto auto;
+  width: 100%;
+  aspect-ratio: 15/8.5;
+  object-fit: cover;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
 }
 .new-body-header-left{
   padding: auto 0px;
@@ -404,11 +438,7 @@ img{
 font-size: 18px;
 font-family: Arial;
 }
-.new-body-header-right img{
-  width: 100%;
-  aspect-ratio: 15/8.5;
-  object-fit: cover;
-}
+
 .new-body-header-left .new-body-header-left-text{
   line-height: 20px;
   font-size: 15.6px;
@@ -430,7 +460,7 @@ font-family: Arial;
 }
 .new-body-header-left{
   padding: 0 45px 0 45px;
-  background-color:#EBECEE;
+  /* background-color:#EBECEE; */
 }
 /* .new-body-mini .new-body-columns{
   display: grid;
@@ -459,11 +489,16 @@ font-family: Arial;
   /* aspect-ratio: 5/6; */
   /* display: grid;
   grid-template-rows:  1fr 1fr 1fr 1fr; */
+
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  column-gap: 10px;
+  column-gap: 30px;
   row-gap: 10px;
+
+}
+.new-body-box-mini-mini{
   border: #DDDDDD solid;
+  margin-bottom: 30px;
   border-width: 0.1px;
 }
 .new-body-box-mini button{
@@ -472,11 +507,21 @@ font-family: Arial;
   font-weight: bold;
   border: none;
   background-color: #FFFF;
+  margin-bottom: 30px;
 }
 .new-body-footer{
 
 text-align: center;
 
+}
+.new-body-footer-button{
+  width: 150px;
+  height: 40px;
+  color: white;
+  background-color: #BC0517;
+  border: none;
+  margin-bottom: 65px;
+  border-radius: 15px;
 }
 .new-navbar .new-body-footer button{
   font-size: 30px;
@@ -486,4 +531,5 @@ text-align: center;
   color: #BC0517;
   font-weight: bold;
   border: none;
+
 }
