@@ -1,38 +1,37 @@
-.image{
+.group{
     display: flex;
-    max-width: 100%;
-    height: 800px;
+}
+.image{
     background-image: url(./../img/dang-nhap.jpg);
     background-size: cover;
+    background-position: 100% 100%;
+    background-repeat: no-repeat;
 }
 .login-form{
-    display: flex; 
-    margin: 150px;
-    max-width: 500px;
-    height: 430px;
+    display: block; 
+    margin: 10%;
+    max-width: (20%,100%,40%); 
     background-color: #fff;
     border-radius: 15px;
-    padding: 30px;
+    padding: 2%;
     line-height: 2.0;
 }
 .signup-form{
-    display: flex;
-    margin: 150px;
-    max-width: 500px;
-    height: 380px;
+    display: block;
+    margin: 10%;
+    max-width: (35%,100%,40%);
     background-color: #fff;
     border-radius: 15px;
-    padding: 30px;
+    padding: 2%;
     line-height: 2.0;
 }
 .forget-form{
-    display: flex;
-    margin: 150px;
-    max-width: 500px;
-    height: 320px;
+    display: block;
+    margin: 10%;
+    width: (20%, 100%, 20%);
     background-color: #fff;
     border-radius: 15px;
-    padding: 30px;
+    padding: 2%;
     line-height: 2.0;
 }
 .form-group{

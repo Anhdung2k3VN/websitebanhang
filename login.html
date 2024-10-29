@@ -13,6 +13,7 @@
       src="https://kit.fontawesome.com/b05105b352.js"
       crossorigin="anonymous"
     ></script>
+    <script src="./js/login.js"></script>
     <link rel="shortcut icon" href="img/logo.png" type="image/x-icon">
     <title>Tài khoản</title>
   </head>
@@ -76,23 +77,24 @@
       </div>
     </header>
     <!-----------------Đăng nhập------------------->
-    <div class="image">
+      <div class="group image">
+        <!-- <img class="image" src="./img/dang-nhap.jpg" alt=""> -->
         <div class="login-form">
             <div>
                 <h3>ĐĂNG NHẬP</h3>
-                <p>Trở thành thành viên của 360 Boutique <span><a style="color: blue;" href="./signup.html">Đăng ký ngay</a></span></p>
+                <p>Trở thành thành viên của 360 Boutique <a href="./signup.html"><span style="color: blue;">Đăng ký ngay</span></a></p>
                 <form action="">
                     <div class="form-group">
                         <label for="user">
                           <b>Tên tài khoản hoặc địa chỉ email <span style="color: red;">&#42</span></b>
                         </label>
-                        <input class="form-input" id="user" type="email"required>
+                        <input class="form-input js-user-login" id="user" type="text"required>
                     </div>
                     <div class="form-group">
                         <label for="pass">
                             <b>Mật khẩu <span style="color: red;">&#42</span></b>
                         </label>
-                        <input class="form-input" id="pass" type="password"required>
+                        <input class="form-input js-pass-login" id="pass" type="password"required>
                     </div>
                     <div class="sub-form-group">
                       <div class="sub1">
@@ -104,12 +106,12 @@
                       </div>
                     </div>
                     <div class="form-group">
-                        <button class="submit" type="submit">ĐĂNG NHẬP</button>
+                      <button onclick="checkUser()" class="submit">ĐĂNG NHẬP</button>
                     </div>
                 </form>
             </div>
           </div>
-    </div>
+      </div>
       
     <!-- -------------------------------------- -->
     <section class="app-container">

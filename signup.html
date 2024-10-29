@@ -13,6 +13,7 @@
       src="https://kit.fontawesome.com/b05105b352.js"
       crossorigin="anonymous"
     ></script>
+    <script src="./js/login.js"></script>
     <link rel="shortcut icon" href="img/logo.png" type="image/x-icon">
     <title>Tài khoản</title>
   </head>
@@ -76,26 +77,28 @@
       </div>
     </header>
     <!-----------------Đăng nhập------------------->
-    <div class="image">
+    <div class="group image">
+      <!-- <img class="image" src="./img/dang-nhap.jpg" alt=""> -->
         <div class="signup-form">
           <div>
             <h3>ĐĂNG KÝ</h3>
-            <p>Bạn đã có tài khoản? <span><a style="color: blue;" href="./login.html">Đăng nhập ngay</a></span></p>
+            <p>Bạn đã có tài khoản? <a href="./login.html"><span style="color: blue;">Đăng nhập ngay</span></a></p>
             <form action="">
               <div class="form-group">
                 <label for="username">
-                    <b>Địa chỉ email <span style="color: red;">&#42</span></b>
+                    <b>Địa chỉ email hoặc tên đăng nhập <span style="color: red;">&#42</span></b>
                 </label>
-                <input class="form-input" id="username" type="email"required>
+                <input class="form-input js-user-signup" id="username" type="text"required>
               </div>
               <div class="form-group">
                 <label for="password">
                     <b>Mật khẩu <span style="color: red;">&#42</span></b>
                 </label>
-                <input class="form-input" id="password" type="password"required>
+                <input class="form-input js-pass-signup" id="password" type="password"required>
+                <p style="color: red;" class="alert-user"></p>
               </div>
               <div class="form-group">
-                <button class="submit" type="submit">ĐĂNG KÝ</button>
+                <button onclick="addUser()" class="submit">ĐĂNG KÝ</button>
               </div>
             </form>
           </div>
