@@ -12,7 +12,7 @@ const newinfo = [
         content: 'Bạn đang tìm kiếm những cách phối đồ đơn giản nhưng vẫn thật phong cách với quần jean và áo sơ mi? Cặp đôi kinh điển này chưa bao giờ lỗi mốt và luôn mang đến vẻ ngoài lịch lãm, trẻ trung cho phái mạnh. 360 giới thiệu đến bạn 3 cách phối quần jean nam với áo sơ mi nam cực kỳ đa năng, phù hợp với nhiều hoàn cảnh khác nhau.'
     },
     {
-        img: './img/collection/POTTK442-QGNTK407-AHHTK403-QGNTK407-4-Custom.jpg',
+        img: './img/collection/Banner-web-595x363-1.jpg',
         time: '02/10/2024',
         title: 'BỘ NỈ NAM CAO CẤP PHONG CÁCH THỂ THAO CHẤT LƯỢNG GIÁ TỐT',
         content: 'Bộ đồ nỉ nam không còn đơn thuần là trang phục thể thao, mà đã trở thành một item thời trang không thể thiếu trong tủ đồ của mọi chàng trai.Bộ đồ nỉ nam không còn đơn thuần là trang phục thể thao, mà đã trở thành một item thời trang không thể thiếu trong tủ đồ của mọi chàng trai. Với sự đa dạng về kiểu dáng,'

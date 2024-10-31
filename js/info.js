@@ -1,8 +1,9 @@
 console.log('test');
-Show();
+
+Show_info();
 buttonsearchbranch();
 show_Map();
-function Show() {
+function Show_info() {
   let valueoutput = '<option value="0">Chọn tỉnh, thành phố</option>';
   city.forEach((valuecity) => {
     valueoutput += ` <option value="${valuecity.id}" class="js-city">${valuecity.city}</option>`;
@@ -104,7 +105,6 @@ function buttonsearchbranch() {
   let count = 0;
   let branchoutput = '';
   document.querySelector('.js-select-button-search').addEventListener('click', () => {
-    console.log('test click');
     valueshow = findbranch();
     console.log(valueshow.outputHTML);
     document.querySelector('.js-find-branch').innerHTML = `Tìm thấy ${valueshow.count} cửa hàng`;
@@ -130,3 +130,7 @@ function show_Map() {
 
 
 }
+
+// ------------------------------------------------------------------------------------------------------------
+// collection
+
