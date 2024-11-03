@@ -7,13 +7,13 @@
       rel="stylesheet"
       href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
     />
-    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/Signup.css">
     <link rel="stylesheet" href="./css/login.css">
-    <script
+    <script>
       src="https://kit.fontawesome.com/b05105b352.js"
       crossorigin="anonymous"
-    ></script>
-    <script src="./js/login.js"></script>
+    </script>
     <link rel="shortcut icon" href="img/logo.png" type="image/x-icon">
     <title>Tài khoản</title>
   </head>
@@ -78,23 +78,26 @@
     </header>
     <!-----------------Đăng nhập------------------->
       <div class="group image">
-        <!-- <img class="image" src="./img/dang-nhap.jpg" alt=""> -->
-        <div class="login-form">
+
+        <div class="login-form container">
             <div>
-                <h3>ĐĂNG NHẬP</h3>
+                <h3 class="sign-up-header">ĐĂNG NHẬP</h3>
                 <p>Trở thành thành viên của 360 Boutique <a href="./signup.html"><span style="color: blue;">Đăng ký ngay</span></a></p>
-                <form action="">
-                    <div class="form-group">
+                <form action="" method="post" class="form" id="login">
+                    <div class="form-group input-box">
                         <label for="user">
-                          <b>Tên tài khoản hoặc địa chỉ email <span style="color: red;">&#42</span></b>
+                          <b>Tên đăng nhập <span style="color: red;">&#42</span></b>
                         </label>
-                        <input class="form-input js-user-login" id="user" type="text"required>
+                        <input class="form-input form-control" name="user" id="user" type="text" placeholder="Nhập tên đăng nhập của bạn" required>
+                        <span class="invalid-message"></span>
                     </div>
-                    <div class="form-group">
+                    <div class="form-group input-box">
                         <label for="pass">
                             <b>Mật khẩu <span style="color: red;">&#42</span></b>
                         </label>
-                        <input class="form-input js-pass-login" id="pass" type="password"required>
+                        <input class="form-input form-control" name="pass" id="pass" type="password" placeholder="Nhập mật khẩu" required>
+                        <span class="invalid-message"></span><br>
+                        <span class="login-fail"></span>
                     </div>
                     <div class="sub-form-group">
                       <div class="sub1">
@@ -105,12 +108,10 @@
                         <p><a href="./forget_pass.html">Quên mật khẩu?</a></p>
                       </div>
                     </div>
-                    <div class="form-group">
-                      <button onclick="checkUser()" class="submit">ĐĂNG NHẬP</button>
-                    </div>
+                    <button type="submit" class="submit-button form-group">ĐĂNG NHẬP</button>
                 </form>
             </div>
-          </div>
+        </div>
       </div>
       
     <!-- -------------------------------------- -->
@@ -145,5 +146,34 @@
             GPKD: <b>0107756568 </b>
         </p>
     </div>
+
+    <script src="./js/validator.js"></script>
+    <script>
+      let userList = JSON.parse(localStorage.getItem('userList'));
+      console.log(userList);
+      Validator_login({
+          form: '#login',
+          rules: [
+              Validator_login.isRequired('#user', 'Vui lòng nhập tên đăng nhập'),
+              Validator_login.isRequired('#pass', 'Vui lòng nhập mật khẩu')
+          ],
+          onSubmit: function (data) {
+              console.log (data);
+              let check = false;
+              for(let i=0; i<userList.length; i++){
+                if(userList[i].name === data.user && userList[i].password === data.pass){
+                  check = true;
+                }
+              }
+              if(check){
+                window.location.href = "index.html";
+                document.querySelector('.login-fail').innerHTML = '';
+              }else{
+                document.querySelector('.login-fail').innerHTML = 'Sai tên đăng nhập hoặc mật khẩu';
+              }
+              document.querySelector('.form-input').value = '';
+          }
+      });
+    </script>
   </body>
 </html>

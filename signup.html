@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://kit.fontawesome.com/d671763fab.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
-    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/Signup.css">
     <script type="module" src="./js/script.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -88,44 +88,44 @@
         <div class="container">
             <div class="sign-up-header">ĐĂNG KÝ</div>
             <p>Bạn đã có tài khoản? <a href="./login.html"><span style="color: blue;">Đăng nhập ngay</span></a></p>
-            <form action="" method="POST" class="form" id="form-1">
-                <div class="sign-up-form">
+            <div class="sign-up-form">
+                <form action="" method="POST" class="form" id="form-1">
+
                     <div class="input-box" style="    line-height: 1.6rem;">
-                        <span class="detail">Tên đăng nhập:</span>
+                        <span class="detail">Tên đăng nhập</span>
                         <input id="name" name="name" type="text" class="form-control"
                             placeholder="Nhập tên đăng nhập của bạn">
                         <span class="invalid-message"></span>
                     </div>
                     <div class="input-box">
                         <span class="detail">Email</span>
-                        <input id="email" name="email" type="text" placeholder="Email" required>
+                        <input id="email" name="email" type="text" class="form-control" placeholder="Email">
                         <span class="invalid-message"></span>
                     </div>
                     <div class="input-box">
                         <span class="detail">Số điện thoại</span>
-                        <input id="phone-number" name="phone-number" type="text" placeholder="Số điện thoại" required>
+                        <input id="phone-number" name="phone-number" type="text" class="form-control" placeholder="Số điện thoại">
                         <span class="invalid-message"></span>
                     </div>
                     <div class="input-box">
                         <span class="detail">Mật khẩu</span>
-                        <input id="password" name="password" type="password" placeholder="Nhập mật khẩu của bạn"
-                            required>
+                        <input id="password" name="password" type="password" class="form-control" placeholder="Nhập mật khẩu của bạn">
                         <span class="invalid-message"></span>
                     </div>
                     <div class="input-box">
                         <span class="detail">Xác nhận mật khẩu</span>
-                        <input id="confirm-password" name="confirm-password" type="password"
-                            placeholder="Xác nhận lại mật khẩu" required>
+                        <input id="confirm-password" name="confirm-password" type="password" class="form-control"
+                            placeholder="Xác nhận lại mật khẩu">
                         <span class="invalid-message"></span>
                     </div>
                     <!-- <input type="submit" value="Đăng nhập" class="form-submit" class="sign-up-button"
                         style=" border: none;"> -->
-                    <button class="sign-up-button form-submit">
+                    <button type="submit" class="sign-up-button form-submit">
                         Đăng ký
                     </button>
-                </div>
-            </form>
 
+                </form>
+            </div>
         </div>
     </div>
     <section class="app-container">
@@ -162,6 +162,8 @@
 </body>
 <script src="./js/validator.js"></script>
 <script>
+    let userList = JSON.parse(localStorage.getItem('userList'));
+    // console.log(userList);
     Validator({
         form: '#form-1',
         rules: [
@@ -169,13 +171,21 @@
             Validator.isRequired('#email', 'Vui lòng nhập email'),
             Validator.isEmail('#email'),
             Validator.isRequired('#phone-number', 'Vui lòng nhập số điện thoại'),
+            Validator.isNumber('#phone-number'),
             Validator.isRequired('#password', 'Vui lòng nhập mật khẩu'),
             Validator.minLength('#password', 8),
             Validator.isRequired('#confirm-password', 'Vui lòng xác nhận lại mật khẩu'),
             Validator.isConfirmed('#confirm-password', function () {
                 return document.querySelector('#form-1 #password').value;
             }, 'Mật khẩu nhập lại không chính xác')
-        ]
+        ],
+        onSubmit: function (data) {
+            // console.log (data);
+            userList.push(data);
+            localStorage.setItem('userList', JSON.stringify(userList));
+            window.location.href = "login.html";
+            console.log(userList);
+        }
     });
 </script>
 

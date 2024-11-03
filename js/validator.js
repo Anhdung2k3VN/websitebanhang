@@ -24,6 +24,7 @@ function Validator(option) {
             inputElement.parentElement.querySelector('.invalid-message').innerHTML = '';
             inputElement.parentElement.classList.remove('invalid');
         }
+        return input;
 
     }
     let formElement = document.querySelector(option.form);
@@ -31,18 +32,31 @@ function Validator(option) {
     if (formElement) {
 
         //Lấy element của form cần validate
-
+        // console.log(formElement);
 
         formElement.onsubmit = function (e) {
-            alert("Hà Thanh Dũng");
+            e.preventDefault();
+            let isFormValid = true;
 
-            // e.preventDefault();
-            // option.rules.forEach(function (rule) {
-            //     let inputElement = formElement.querySelector(rule.selector);
-            //     console.log(inputElement);
-            //     validate(inputElement, rule);
+            option.rules.forEach(function (rule) {
+                let inputElement = formElement.querySelector(rule.selector);
+                let isValid = validate(inputElement, rule);
+                if (isValid && isFormValid) {
+                    isFormValid = false;
+                }
+            });
 
-            // });
+            if (isFormValid) {
+                if (typeof option.onSubmit === 'function') {
+                    let enableInputs = formElement.querySelectorAll('[name]:not([disabled])');
+                    let formValues = Array.from(enableInputs).reduce(function (values, input) {
+                        return (values[input.name] = input.value) && values;
+                    }, {});
+                    option.onSubmit(formValues);
+                    // console.log(enableInputs);
+                }
+                
+            }
 
         }
         option.rules.forEach(function (rule) {
@@ -109,4 +123,111 @@ Validator.isConfirmed = function (selector, getCofirmValue, message) {
             return value === getCofirmValue() ? undefined : message || 'Giá trị nhập vào không chính xác';
         }
     }
+}
+Validator.isNumber = function (selector) {
+    return {
+        selector: selector,
+        test: function (value) {
+            let num = /^[+-]?\d+(\.\d+)?$/;
+
+            return (num.test(value) ? undefined : 'Vui lòng nhập đúng định dạng số điện thoại');
+        }
+    };
+}
+
+function Validator_login(option) {
+    let selectorRules = {};
+    //Hàm thực hiẹn validate
+    function validate(inputElement, rule) {
+        
+        let rules = selectorRules[rule.selector];
+        let input;
+        for (let i = 0; i < rules.length; ++i) {
+            input = rules[i](inputElement.value);
+            if (input) { break; }
+        }
+        if (input) {
+
+            inputElement.parentElement.querySelector('.invalid-message').innerHTML = input;
+            Validator(option);
+            inputElement.parentElement.classList.add('invalid');
+            // console.log(inputElement.parentElement);
+        }
+        else {
+            inputElement.parentElement.querySelector('.invalid-message').innerHTML = '';
+            inputElement.parentElement.classList.remove('invalid');
+        }
+        return input;
+
+    }
+    let formElement = document.querySelector(option.form);
+
+    if (formElement) {
+
+        //Lấy element của form cần validate
+        // console.log(formElement);
+
+        formElement.onsubmit = function (e) {
+            e.preventDefault();
+            let isFormValid = true;
+
+
+            option.rules.forEach(function (rule) {
+                let inputElement = formElement.querySelector(rule.selector);
+                let isValid = validate(inputElement, rule);
+                if (isValid && isFormValid) {
+                    isFormValid = false;
+                }
+            });
+
+            if (isFormValid) {
+                if (typeof option.onSubmit === 'function') {
+                    let enableInputs = formElement.querySelectorAll('[name]:not([disabled])');
+                    let formValues = Array.from(enableInputs).reduce(function (values, input) {
+                        return (values[input.name] = input.value) && values;
+                    }, {});
+                    option.onSubmit(formValues);
+                    // console.log(enableInputs);
+                }
+                
+            }
+
+        }
+        option.rules.forEach(function (rule) {
+
+            //Lưu lại cái rules cho mỗi input
+            if (Array.isArray(selectorRules[rule.selector])) {
+                selectorRules[rule.selector].push(rule.test);
+            }
+            else {
+                selectorRules[rule.selector] = [rule.test];
+            }
+            let inputElement = formElement.querySelector(rule.selector);
+
+            if (inputElement) {
+                //Xử lí trường hợp blur khỏi input
+                inputElement.onblur = function () {
+                    validate(inputElement, rule);
+                }
+
+                // Xử lý trường hợp người dùng đang nhập 
+                inputElement.oninput = function () {
+                    inputElement.parentElement.querySelector('.invalid-message').innerHTML = '';
+                    inputElement.parentElement.classList.remove('invalid');
+                }
+
+            }
+        });
+        // console.log(selectorRules);
+    }
+}
+
+//Định nghĩa rule
+Validator_login.isRequired = function (selector, message) {
+    return {
+        selector: selector,
+        test: function (value) {
+            return value ? undefined : message || 'Trường này không được để trống';
+        }
+    };
 }
