@@ -109,6 +109,7 @@ function click_new_collection() {
         value.addEventListener('click', function () {
             let test = "123";
             console.log("value nè");
+            console.log(value)
             show_collection(value.id);
         });
     })
